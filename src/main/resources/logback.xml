@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Убрали "-5", теперь уровень пишется как есть, строго с одним пробелом -->
+            <pattern>%d{HH:mm:ss.SSS} %level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Жестко глушим системный мусор от TestNG (даже если в YAML стоит TRACE) -->
+    <logger name="org.testng" level="WARN" />
+
+    <!-- Базовый стартовый уровень (работает до того, как загрузится YAML) -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

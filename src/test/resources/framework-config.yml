@@ -1,0 +1,17 @@
+runner_settings:
+#    parallel: true
+#    threads: 5
+    retry_counts: 2
+    run_by: group # testName | group
+    value: ["API_base_tests"]
+
+api_settings:
+#    timeout_ms: 5000
+#    log_all_requests: true
+    log_level: "INFO" # INFO | DEBUG | TRACE
+
+paths:
+    env_settings_dir: "src/test/resources/envs"
+    mocks_dir: "src/test/resources/mocks"
+    payloads_dir: "src/test/resources/payloads"
+    test_data_dir: "src/test/resources/test_data"

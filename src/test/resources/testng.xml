@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Запуск по конфигурации framework-config.yml">
+    <listeners>
+        <listener class-name="Config_lib.TestFilterListener"/>
+        <listener class-name="Config_lib.RetryAnnotationTransformer"/>
+    </listeners>
+    <test name="API Тесты">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,7 @@
+- TestName: "Тест запроса GET с BasicAuth"
+  username: "admin"
+  password: "admin"
+
+- TestName: "Тест запроса POST"
+  username: "admin"
+  password: "admin"
